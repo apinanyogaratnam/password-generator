@@ -28,14 +28,8 @@ void hash_encrypt(char *password, int length_of_password, int *empty_hash_array)
     }
 }
 
-int factorial(int number) {
-    if (number == 0 || number == 1) return 1;
-    return number * (number-1);
-}
-
-//char *suggest_password(int length_of_password, bool contains_lowercase, bool contains_uppercase, bool contains_special_characters, bool contains_numbers);
-
 int main() {
+    // caesar_encrypt
     // char name[1024] = "hello world123456789";
     // printf("%s\n", caesar_encrypt(name, 3));
     // return 0;
@@ -44,12 +38,13 @@ int main() {
     // num = num << 1;
     // printf("num: %d\n", num);
 
-    int hash_array[6];
-    char *password = "hacked";
-    hash_encrypt(password, 6, hash_array);
-    for (int i=0; i<6; i++) {
-        printf("hash for %c is: %d\n", *(password+i), hash_array[i]);
-    }
+    // hash_encrypt
+    // int hash_array[6];
+    // char *password = "hacked";
+    // hash_encrypt(password, 6, hash_array);
+    // for (int i=0; i<6; i++) {
+    //     printf("hash for %c is: %d\n", *(password+i), hash_array[i]);
+    // }
 }
 
 // notes: 

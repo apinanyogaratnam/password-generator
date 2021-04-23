@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "encryption.h"
 
 #define DELIMITER '\0'
 
-char *caesar_encrypt(char *password, int shift) {
+void *caesar_encrypt(char *password, int shift) {
     // loop through password until DELIMITER appears
     for (int i=0; *(password+i) != DELIMITER; i++) {
         *(password+i) = *(password+i) + shift;
@@ -13,7 +14,7 @@ char *caesar_encrypt(char *password, int shift) {
     return password;
 }
 
-char *caesar_decrypt(char *encrypted_key, int shift) {
+void *caesar_decrypt(char *encrypted_key, int shift) {
     // loop through encrypted_key until DELIMITER appears
     for (int i=0; *(encrypted_key+i) != DELIMITER; i++) {
         *(encrypted_key+i) = *(encrypted_key+i) - shift;
@@ -28,7 +29,7 @@ void hash_encrypt(char *password, int length_of_password, int *empty_hash_array)
     }
 }
 
-int main() {
+//int main() {
     // caesar_encrypt
     // char name[1024] = "hello world123456789";
     // printf("%s\n", caesar_encrypt(name, 3));
@@ -45,7 +46,7 @@ int main() {
     // for (int i=0; i<6; i++) {
     //     printf("hash for %c is: %d\n", *(password+i), hash_array[i]);
     // }
-}
+//}
 
 // notes: 
     //using permutation with repitition we can calculate strength of password (how many tries it takes to brute force) formula: n^r   n = number of different possible characters, r = length of password
